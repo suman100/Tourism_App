@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.suman_pc.tourism_app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <permission
+        android:name="com.example.suman_pc.tourism_app.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.suman_pc.tourism_app.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permissions.READ_GSERVICES" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".Firebase"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Navigation" />
+        <activity
+            android:name=".Activity.Bungy"
+            android:parentActivityName=".Navigation">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Navigation" />
+        </activity>
+        <activity android:name=".Activity.Paragliding" />
+        <activity android:name=".Activity.SkyDiving" />
+        <activity android:name=".Activity.ZipFlying" />
+        <activity android:name=".Activity.Rafting" />
+        <activity android:name=".home.Kathmandu" />
+        <activity android:name=".home.Pokhara" />
+        <activity android:name=".home.Chitwan" />
+        <activity android:name=".home.Bhaktapur" />
+        <activity android:name=".home.Patan" />
+        <activity android:name=".Eventpage.Dashain" />
+        <activity android:name=".Eventpage.Tihar" />
+        <activity android:name=".Eventpage.Maha_Shivaratri" />
+        <activity android:name=".Eventpage.Holi" />
+        <activity android:name=".Eventpage.Bisket_Jatra" />
+        <activity android:name=".Eventpage.Haritalika_Teej" />
+        <activity android:name=".Trekkingpage.Everest_basecamp" />
+        <activity android:name=".Trekkingpage.Annapurna_basecamp" />
+        <activity android:name=".Trekkingpage.Poonhill" />
+        <activity android:name=".Trekkingpage.Langtang" />
+        <activity android:name=".Trekkingpage.Upper_mustang" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCMfYQAlb48Kqep_HfaaeVkvul78_948-g" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".Morepage.AboutUs" />
+        <activity android:name=".Morepage.Map" />
+        <activity android:name=".Morepage.Feedback" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity.SignUpActivity" />
+        <activity android:name=".LoginActivity.ResetPasswordActivity" />
+        <activity android:name=".LoginActivity.LoginActivity" />
+        <activity android:name=".Morepage.Weather"></activity>
+    </application>
+
+</manifest>
